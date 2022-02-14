@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+<%- include('nav'); -%>
+
+
+
+    <h1 class="box" id="heading"><%=title%></h1>
+    <ul class="box">  
+        <%for(let i=0; i<item.length; i++){%>
+            <li class="item"><input type="checkbox" ><p><%=item[i]%></p></li>
+        <%}%>
+        <form class="box" action="/" method="post">
+            <input type="text" name = "item" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="<%=title%>">+</button>
+    
+        </form>
+    </ul>
+
+    <%- include('footer'); -%>
+
+
+
+
